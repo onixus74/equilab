@@ -3,6 +3,8 @@ import ReactSwipe from 'react-swipe';
 import logo from './logo.svg';
 import './App.css';
 import './css/main.css';
+import PageWrapper from './components/PageWrapper/PageWrapper';
+import IntroVideo from './components/IntroVideo/IntroVideo';
 
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 
@@ -14,6 +16,20 @@ class App extends Component {
     super(props)
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+    this.state = {
+      video: []
+    }
+
+  }
+
+  componentWillMount() {
+    this.setState({video: [
+        {
+          introVideo: "img/horsemoviegrey2.mp4",
+          muted: "true"
+       }
+      ]
+    });
   }
 
   next() {
@@ -31,16 +47,18 @@ class App extends Component {
       scrollBar:            false,
       navigation:           true,
       verticalAlign:        false,
-      arrowNavigation:      true
+      arrowNavigation:      true,
+      sectionPaddingTop:    '0', 
+      sectionPaddingBottom: '0'
     };
 
 
     return (
       <div>
         <Header>
-          <a href="#sectionOne">Section One</a>
+          {/* <a href="#sectionOne">Section One</a>
           <a href="#sectionTwo">Section Two</a>
-          <a href="#sectionThree">Section Three</a>
+          <a href="#sectionThree">Section Three</a> */}
         </Header>
         <Footer>
           {/* <a href="">Dcoumentation</a>
@@ -48,7 +66,7 @@ class App extends Component {
           <a href="">About</a> */}
         </Footer>
         <SectionsContainer className="container" {...options}>
-          <Section className="custom-section" verticalAlign="true" color="#69D2E7">Section 1</Section>
+          <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
           <Section color="#A7DBD8" className="horse-carousel center">
             <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
                 <div className="center" style={{height: "100vh", background: "red"}}>Slide 1</div>
