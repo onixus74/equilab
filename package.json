@@ -5,7 +5,9 @@
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "react-fullpage": "^0.1.18"
+    "react-fullpage": "^0.1.18",
+    "react-swipe": "^5.0.8",
+    "swipe-js-iso": "^2.0.4"
   },
   "devDependencies": {
     "react-scripts": "1.0.13"

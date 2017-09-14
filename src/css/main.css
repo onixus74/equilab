@@ -1,0 +1,11 @@
+.horse-carousel {
+  position: relative;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.custom-section {
+  text-align: center;
+}
