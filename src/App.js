@@ -5,6 +5,7 @@ import './App.css';
 import './css/main.css';
 import PageWrapper from './components/PageWrapper/PageWrapper';
 import IntroVideo from './components/IntroVideo/IntroVideo';
+import TestW from './TestW';
 
 import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 
@@ -25,8 +26,11 @@ class App extends Component {
   componentWillMount() {
     this.setState({video: [
         {
-          introVideo: "img/horsemoviegrey2.mp4",
-          muted: "true"
+          video_src: "img/horsemoviegrey2.mp4", 
+          muted: "true",
+          autoplay: "true",
+          loop: "true",
+          controls: "false"
        }
       ]
     });
@@ -69,7 +73,7 @@ class App extends Component {
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
           <Section color="#A7DBD8" className="horse-carousel center">
             <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
-                <div className="center" style={{height: "100vh", background: "red"}}>Slide 1</div>
+                <div className="center" style={{height: "100vh", background: "red"}}><TestW /></div>
                 <div className="center" style={{height: "100vh", background: "green"}}>Slide 2</div>
                 <div className="center" style={{height: "100vh", background: "yellow"}}>Slide 3</div>
             </ReactSwipe>

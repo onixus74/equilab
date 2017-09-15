@@ -9,3 +9,16 @@
 .custom-section {
   text-align: center;
 }
+
+.bg{
+  background: url(../bild2a.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.bgc{
+  background: rgba(56, 196, 140, 0.9);
+  width: 100%;
+  height: 100%;
+}
