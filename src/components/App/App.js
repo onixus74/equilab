@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import ReactSwipe from 'react-swipe';
-import logo from './logo.svg';
+import logo from '../../images/logo.svg';
 import './App.css';
-import './css/main.css';
-import PageWrapper from './components/PageWrapper/PageWrapper';
-import IntroVideo from './components/IntroVideo/IntroVideo';
-import TestW from './TestW';
+import '../../css/main.css';
+import PageWrapper from '../PageWrapper/PageWrapper';
+import IntroVideo from '../IntroVideo/IntroVideo';
+import TestW from '../TestW/TestW';
 
-import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
+// import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
+import SectionsContainer from "../SectionsContainer/SectionsContainer";
+import Section from "../Section/Section";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 
 // => in the render() method of your app
@@ -26,7 +30,7 @@ class App extends Component {
   componentWillMount() {
     this.setState({video: [
         {
-          video_src: "img/horsemoviegrey2.mp4", 
+          video_src: "img/horsemoviegrey2.mp4",
           muted: "true",
           autoplay: "true",
           loop: "true",
@@ -52,7 +56,7 @@ class App extends Component {
       navigation:           true,
       verticalAlign:        false,
       arrowNavigation:      true,
-      sectionPaddingTop:    '0', 
+      sectionPaddingTop:    '0',
       sectionPaddingBottom: '0'
     };
 

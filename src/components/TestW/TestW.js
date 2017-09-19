@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TestC from './TestC';
+import TestC from '../TestC/TestC';
 
 export default class TestW extends Component {
     render () {
