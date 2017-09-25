@@ -41,10 +41,16 @@ class App extends Component {
       bgAndColor: [
         {
           bgImg:{
-            bgImg1: "png"
+            details: "img/details.png",
+            social: "img/social.png",
+            track: "img/trends.png",
+            trends: "img/trends"
           },
           colors: {
-            orange: "rgba(237,108,68, 0.6)"
+            orange: "rgba(237,108,68, 0.6)",
+            green: "rgba(56,132,130, 0.6)",
+            yellow: "rgba(253, 174, 58, 0.9)",
+            white: "rgba(255,255,255, 0.6)"
           }
         }
         
