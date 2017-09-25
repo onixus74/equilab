@@ -22,7 +22,8 @@ class App extends Component {
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
     this.state = {
-      video: []
+      video: [],
+      bgAndColor: []
     }
 
   }
@@ -36,6 +37,17 @@ class App extends Component {
           loop: "true",
           controls: "false"
        }
+      ],
+      bgAndColor: [
+        {
+          bgImg:{
+            bgImg1: "png"
+          },
+          colors: {
+            orange: "rgba(237,108,68, 0.6)"
+          }
+        }
+        
       ]
     });
   }
