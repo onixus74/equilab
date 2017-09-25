@@ -41,10 +41,10 @@ class App extends Component {
       bgAndColor: [
         {
           bgImg:{
-            details: "img/details.png",
-            social: "img/social.png",
-            track: "img/trends.png",
-            trends: "img/trends"
+            details: "/img/details.jpg",
+            social: "img/social.jpg",
+            track: "img/track.jpg",
+            trends: "img/trends.jpg"
           },
           colors: {
             orange: "rgba(237,108,68, 0.6)",
@@ -94,10 +94,27 @@ class App extends Component {
         <SectionsContainer className="container" {...options}>
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
           <Section color="#A7DBD8" className="horse-carousel center">
-            <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: false}}>
-                <div className="center" style={{height: "100vh", background: "red"}}><TestW /></div>
-                <div className="center" style={{height: "100vh", background: "green"}}>Slide 2</div>
-                <div className="center" style={{height: "100vh", background: "yellow"}}>Slide 3</div>
+            <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
+                <div className="center" style={{height: "100vh", background: "red"}}>
+                  <TestW 
+                        bgImg={this.state.bgAndColor[0].bgImg.track}
+                        bgColor={this.state.bgAndColor[0].colors.yellow} />
+                </div>
+                <div className="center" style={{height: "100vh", background: "green"}}>
+                  <TestW 
+                          bgImg={this.state.bgAndColor[0].bgImg.details}
+                          bgColor={this.state.bgAndColor[0].colors.orange} />
+                </div>
+                <div className="center" style={{height: "100vh", background: "yellow"}}>
+                  <TestW 
+                          bgImg={this.state.bgAndColor[0].bgImg.trends}
+                          bgColor={this.state.bgAndColor[0].colors.white} />
+                </div>
+                <div className="center" style={{height: "100vh", background: "blue"}}>
+                  <TestW 
+                          bgImg={this.state.bgAndColor[0].bgImg.social}
+                          bgColor={this.state.bgAndColor[0].colors.green} />
+                </div>
             </ReactSwipe>
             <div style={{width: "100%", position: "absolute", bottom: "100px", textAlign: "center"}}>
               <button type="button" onClick={this.prev}>Prev</button>
