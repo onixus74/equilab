@@ -23,7 +23,8 @@ class App extends Component {
     this.prev = this.prev.bind(this);
     this.state = {
       video: [],
-      bgAndColor: []
+      bgAndColor: [],
+      sliderProps: []
     }
 
   }
@@ -48,12 +49,42 @@ class App extends Component {
           },
           colors: {
             orange: "rgba(237,108,68, 0.6)",
-            green: "rgba(56,132,130, 0.6)",
+            green: "rgba(56,132,130, 0.89)",
             yellow: "rgba(253, 174, 58, 0.9)",
             white: "rgba(255,255,255, 0.6)"
           }
         }
         
+      ],
+      sliderProps: [
+        {
+          id: 0,
+          hedline: "DETAILS",
+          body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
+          color: "rgba(237,108,68, 0.6)",
+          img: "/img/details.jpg"
+        },
+        {
+          id: 1,
+          hedline: "SOCIAL",
+          body: "See how your co-riders have exercised or give your coach more insight into how you ride when they aren’t around.",
+          color: "rgba(56,132,130, 0.89)",
+          img: "img/social.jpg"
+        },
+        {
+          id: 2,
+          hedline: "TRACK",
+          body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
+          color: "rgba(253, 174, 58, 0.9)",
+          img: "img/track.jpg"
+        },
+        {
+          id: 3,
+          hedline: "TRENDS",
+          body: "Look at your weekly or monthly trends and gain an understanding of how balanced your training has been. ",
+          color: "rgba(255,255,255, 0.6)",
+          img: "img/trends.jpg"
+        } 
       ]
     });
   }
@@ -78,6 +109,11 @@ class App extends Component {
       sectionPaddingBottom: '0'
     };
 
+    let slides = this.state.sliderProps.map(data => {
+      return (<div style={{height: "100vh"}} key={data.id}><TestW var={data} /></div>);
+    });
+
+
 
     return (
       <div>
@@ -95,26 +131,7 @@ class App extends Component {
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
           <Section color="#A7DBD8" className="horse-carousel center">
             <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
-                <div className="center" style={{height: "100vh", background: "red"}}>
-                  <TestW 
-                        bgImg={this.state.bgAndColor[0].bgImg.track}
-                        bgColor={this.state.bgAndColor[0].colors.yellow} />
-                </div>
-                <div className="center" style={{height: "100vh", background: "green"}}>
-                  <TestW 
-                          bgImg={this.state.bgAndColor[0].bgImg.details}
-                          bgColor={this.state.bgAndColor[0].colors.orange} />
-                </div>
-                <div className="center" style={{height: "100vh", background: "yellow"}}>
-                  <TestW 
-                          bgImg={this.state.bgAndColor[0].bgImg.trends}
-                          bgColor={this.state.bgAndColor[0].colors.white} />
-                </div>
-                <div className="center" style={{height: "100vh", background: "blue"}}>
-                  <TestW 
-                          bgImg={this.state.bgAndColor[0].bgImg.social}
-                          bgColor={this.state.bgAndColor[0].colors.green} />
-                </div>
+                {slides}
             </ReactSwipe>
             <div style={{width: "100%", position: "absolute", bottom: "100px", textAlign: "center"}}>
               <button type="button" onClick={this.prev}>Prev</button>

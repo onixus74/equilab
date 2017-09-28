@@ -1,0 +1,9 @@
+.holder{
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 230px;
+    margin-left: 102px;
+    max-width: 1030px;
+    text-align: left;
+    z-index: 3500;
+  }
