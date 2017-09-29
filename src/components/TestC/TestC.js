@@ -6,8 +6,8 @@ export default class TestC extends Component {
         return (
             <div className="bgc" style={{ background: this.props.data.color }}>
                 <div className="holder">
-                <h1>{this.props.data.hedline}</h1>
-                <p>{this.props.data.body}</p>
+                <h1 className={this.props.data.hedline_color}>{this.props.data.hedline}</h1>
+                <p className={this.props.data.body_color}>{this.props.data.body}</p>
                 </div>
             </div>
         );

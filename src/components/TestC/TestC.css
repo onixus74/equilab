@@ -1,9 +1,30 @@
-.holder{
+.holder {
     position: absolute;
     margin: 0 auto;
-    margin-top: 230px;
-    margin-left: 102px;
-    max-width: 1030px;
+    margin-top: 87px;
+    margin-left: 108px;
+    max-width: 715px;
     text-align: left;
     z-index: 3500;
+  }
+
+  .holder h1 {
+    font-size: 100px;
+    margin: 0;
+    padding-bottom: 20px;
+  }
+
+  .holder p {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 70px;
+    margin: 0;
+  }
+
+  .white-text {
+    color: white;
+  }
+
+  .black-text {
+    color: black;
   }
