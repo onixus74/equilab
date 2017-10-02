@@ -118,7 +118,7 @@ class App extends Component {
               <div className="button-left"><p type="button" onClick={this.prev}>&#60;</p></div>
               <div className="phone">
                 <img src="/img/phone.png" />
-                <div className="download">Download</div>
+                <div className="test"><div className="download">Download</div></div>
                 </div>
               <div className="button-right"><p type="button" onClick={this.next}>&#62;</p></div>
             </div>

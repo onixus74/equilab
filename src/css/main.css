@@ -55,7 +55,11 @@ body {
 .phone img {
   width: 250.4px;
   height: 504.6px;
-  padding-bottom: 25px;
+  padding-bottom: 40px;
+}
+
+.test {
+  padding-bottom: 200px;
 }
 
 .download {
