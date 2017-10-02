@@ -110,19 +110,17 @@ class App extends Component {
         </Footer>
         <SectionsContainer className="container" {...options}>
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
-          <Section color="#A7DBD8" className="horse-carousel center">
-           
-              
+          <Section color="#A7DBD8" className="horse-carousel center">  
             <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
                 {slides}
             </ReactSwipe>
-             {/* <div style={{ width: "100%", height: "100%", position: "absolute", zIndex: "5000", marginTop: "200px", marginRight: "200px"}}>
-            
-            </div> */}
-            <div style={{width: "100%", position: "absolute", bottom: "100px", textAlign: "center"}}>
-            <img src="/img/phone.png" />
-              <button type="button" onClick={this.prev}>Prev</button>
-              <button type="button" onClick={this.next}>Next</button>
+            <div className="slider-overlay" >
+              <div className="button-left"><p type="button" onClick={this.prev}>&#60;</p></div>
+              <div className="phone">
+                <img src="/img/phone.png" />
+                <div className="download">Download</div>
+                </div>
+              <div className="button-right"><p type="button" onClick={this.next}>&#62;</p></div>
             </div>
           </Section>
           <Section className="custom-section" verticalAlign="true" color="#E0E4CC">Page 3</Section>
