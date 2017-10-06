@@ -1,3 +1,7 @@
+@import "./fonts.css";
+@import "./typography.css";
+@import "./helper-classes.css";
+
 body {
   margin: 0;
   padding: 0;
@@ -12,6 +16,7 @@ body {
 }
 .custom-section {
   text-align: center;
+  position: relative;
 }
 
 .bg{
@@ -25,4 +30,67 @@ body {
   background: rgba(56, 196, 140, 0.9);
   width: 100%;
   height: 100%;
+}
+
+
+/*SECTIONS*/
+.what-they-say-1-section {
+  position: relative;
+}
+.what-they-say-1-section::before {
+  content: "";
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 40%, 100% 120%, 0 80%);
+  background: #50A6A3;
+}
+
+.hire-section::before {
+  content: "";
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(0 40%, 100% 0, 100% 80%, 0 120%);
+  background: #EB6D4B;
+}
+.hire-section::after {
+  content: "";
+  position:absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  clip-path: polygon(100% 0, 50% 0, 100% 20%);
+  background: #4CA7A4;
+}
+.faq-section {
+  background-image: url(../images/bildFAQ.png);
+  background-size: cover;
+}
+.faq-section::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  left: 0;
+  position: absolute;
+  z-index: 0;
+  transform: skewY(10deg);
+  transform-origin: 0;
+  display: block;
+}
+.contact-section {
+
+}
+
+.Navigation a {
+  background-color: red;
 }

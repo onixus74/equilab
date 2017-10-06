@@ -293,7 +293,7 @@ export default class SectionsContainer extends React.Component {
         let navigationStyle = {
             position: 'fixed',
             zIndex: '10',
-            right: '20px',
+            right: '50px',
             top: '50%',
             transform: 'translate(-50%, -50%)',
         };
@@ -303,7 +303,7 @@ export default class SectionsContainer extends React.Component {
                 display: 'block',
                 margin: '10px',
                 borderRadius: '100%',
-                backgroundColor: '#556270',
+                backgroundColor: 'white',
                 padding: '5px',
                 transition: 'all 0.2s',
                 transform: this.state.activeSection === index ? 'scale(1.3)' : 'none'

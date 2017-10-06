@@ -1,0 +1,63 @@
+@import "../../css/variables.css";
+
+.what-they-say {
+  width: 100%;
+  margin: 0 150px;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto auto auto 1fr;
+  /*grid-template-columns: 35% 30% 30%;*/
+  grid-template-columns: auto 35% 15% 35%;
+  position: relative;
+  grid-gap: 1px;
+  /*background: red;*/
+}
+
+.what-they-say h1 {
+  margin: 0;
+  line-height: 1;
+}
+.what-they-say p {
+  margin: 0;
+}
+
+.what-they-say-item {
+  /*background: red;*/
+  text-align: left;
+}
+
+.what-they-say-item-a {
+  /*background: yellow;*/
+  padding-top: 50px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.rider {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  border: 10px solid rgba(255,255,255,0.5);
+  box-shadow: 2px 2px 0 2px rgba(47, 79, 79, .5);
+}
+
+.rider-image-1 {
+  /*justify-self: end;
+  align-self: center;
+  margin-right: 20px;*/
+}
+.rider-text-1 {
+  align-self: center;
+  padding-left: 20px;
+}
+
+.rider-image-2 {
+  justify-self: end;
+  align-self: center;
+  margin-right: 20px;
+}
+.rider-text-2 {
+  align-self: center;
+}

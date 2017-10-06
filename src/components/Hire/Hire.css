@@ -1,0 +1,50 @@
+@import "../../css/variables.css";
+.hire-wrap {
+  overflow: hidden;
+}
+.hire {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  margin: 0 150px;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 40% 20% 40%;
+  /*background: red;*/
+  overflow: visible;
+}
+
+.hire h2, h3, h4 {
+  margin: 0;
+}
+
+.hire p {
+  margin-top: 0;
+}
+.hire-item {
+  /*background: red;*/
+  text-align: left;
+}
+
+.hire-item-a {
+  text-align: left;
+  justify-self: start;
+  align-self: start;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  /*background: yellow;*/
+}
+
+.hire-item-b, .hire-item-d {
+  padding-top: 40px;
+}
+
+.hire-item-a h1 {
+  margin: 50px 0 0 0;
+  line-height: 1;
+}
+
+.hire-wrap {
+  display: flex;
+  justify-content: center;
+}

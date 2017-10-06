@@ -1,0 +1,125 @@
+@import "../../css/variables.css";
+
+.faq-wrap {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding: 0 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.faq * {
+  box-sizing: border-box;
+}
+.faq {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  align-content: start;
+}
+
+.faq h1 {
+  margin: 50px 0 0 0;
+  line-height: 1;
+  color: #E96D50;
+}
+.faq-item {
+  z-index: 1;
+  display: inline-block;
+}
+
+.faq-item:last-child {
+  /*background: red;*/
+
+}
+
+.faq-item:first-child {
+  color: white;
+  text-align: left;
+}
+
+.faq-item:nth-child(3) {
+  position: relative;
+}
+
+.faq-nav {
+  list-style-type: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.faq-nav li {
+  display: inline-block;
+  border-bottom: 3px solid rgba(255,255,255,0.0);
+  line-height: 1.2;
+  margin: 8px 0;
+  transition: border-bottom 1s;
+}
+.faq-nav li:hover {
+  border-bottom: 3px solid rgba(255,255,255,1.0);
+  cursor: pointer;
+}
+
+.faq-text {
+  background: rgba(255,255,255,0.7);
+  overflow: hidden;
+  text-align: left;
+  padding: 40px 20px 40px 80px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto 230px;
+  border: 20px solid rgba(255,255,255,0.7);
+  max-height: 520px;
+}
+
+.faq-text-wrap {
+  /*max-height: 100%;
+  overflow: scroll;*/
+}
+
+.faq-item h4:first-child {
+  margin-top: 0;
+}
+
+.faq-text-marginal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.read-controls {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 40px;
+}
+
+.read-more {
+  cursor: pointer;
+  height: 50px;
+  background: rgba(255,255,255,0.7);
+  padding: 5px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+.read-less {
+  cursor: pointer;
+  height: 50px;
+  background: rgba(255,255,255,0.7);
+  padding: 5px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;;
+}
