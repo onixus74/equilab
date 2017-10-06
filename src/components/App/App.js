@@ -24,29 +24,62 @@ import Button from "../Button";
 // => in the render() method of your app
 
 class App extends Component {
+  
   constructor(props){
     super(props)
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
     this.state = {
+
       video: [],
       pageHash: null,
       activeSlide: 1,
       bulletsVisible: true,
-      scrollBar: false
-    }
+      scrollBar: false,
+      sliderProps: []
 
+    }
   }
 
   componentWillMount() {
-    this.setState({video: [
+    this.setState({
+      sliderProps: [
         {
-          video_src: "img/horsemoviegrey2.mp4",
-          muted: "true",
-          autoplay: "true",
-          loop: "true",
-          controls: "false"
-       }
+          id: 0,
+          hedline: "DETAILS",
+          hedline_color: "black-text",
+          body: "Afterwards you can analyze your training by looking at your horse’s energy consumption, gait distrubution, intensity, jumps, pace, distance and much more.",
+          body_color: "white-text",
+          color: "rgba(237,108,68, 0.6)",
+          img: "/img/details.jpg"
+        },
+        {
+          id: 1,
+          hedline: "SOCIAL",
+          hedline_color: "black-text",
+          body: "See how your co-riders have exercised or give your coach more insight into how you ride when they aren’t around.",
+          body_color: "white-text",
+          color: "rgba(56,132,130, 0.89)",
+          img: "img/social.jpg"
+        },
+        {
+          id: 2,
+          hedline: "TRACK",
+          hedline_color: "white-text",
+          body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
+          body_color: "white-text",
+          color: "rgba(253, 174, 58, 0.9)",
+          img: "img/track.jpg"
+        },
+        {
+          id: 3,
+          hedline: "TRENDS",
+          hedline_color: "black-text",
+          body: "Look at your weekly or monthly trends and gain an understanding of how balanced your training has been. ",
+          body_color: "black-text",
+          color: "rgba(255,255,255, 0.6)",
+          img: "img/trends.jpg"
+        } 
       ]
     });
   }
@@ -115,7 +148,13 @@ class App extends Component {
       delay:                700
     };
 
-    console.log(this.state.scrollBar);
+
+    let slides = this.state.sliderProps.map(data => {
+      return (<div style={{height: "100vh"}} key={data.id}><TestW var={data} /></div>);
+    });
+
+
+
     return (
       <div>
         <Header>
@@ -130,16 +169,22 @@ class App extends Component {
         </Footer>
         <SectionsContainer className="container" {...options}>
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
+
           <Section color="#A7DBD8" className="horse-carousel center">
-            <ReactSwipe ref="reactSwipe1" className="carousel" swipeOptions={{continuous: false}}>
-                <div className="center" style={{height: "100vh", background: "red"}}><TestW /></div>
-                <div className="center" style={{height: "100vh", background: "green"}}>Slide 2</div>
-                <div className="center" style={{height: "100vh", background: "yellow"}}>Slide 3</div>
+            <ReactSwipe1 ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
+                {slides}
             </ReactSwipe>
-            <div style={{width: "100%", position: "absolute", bottom: "100px", textAlign: "center"}}>
-              <button type="button" onClick={() => this.prev(1)}>Prev</button>
-              <button type="button" onClick={() => this.next(1)}>Next</button>
+            <div className="slider-overlay" >
+              <div className="button-left"><p type="button" onClick={() => this.prev(1)}>&#60;</p></div>
+              <div className="phone">
+                <img src="/img/phone.png" />
+                <div className="test"><div className="download">Download</div></div>
+                </div>
+              <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
+
             </div>
+        
+            
           </Section>
           <Section className="what-they-say-1-section custom-section center" color="">
             <ReactSwipe ref="reactSwipe2" swipeOptions={{continuous: true, speed: 500}}>
@@ -163,6 +208,7 @@ class App extends Component {
             <div className="bullets">
               <div className={`bullet-1 ${this.state.activeSlide === 1 ? "fill-bullet" : ""}`}></div>
               <div className={`bullet-2 ${this.state.activeSlide === 2 ? "fill-bullet" : ""}`}></div>
+
             </div>
             <div className="what-they-say-item download"><Button text="Download"/></div>
           </Section>

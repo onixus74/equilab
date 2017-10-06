@@ -1,10 +1,14 @@
+
 @import "./fonts.css";
 @import "./typography.css";
 @import "./helper-classes.css";
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins';
 }
 .horse-carousel {
   position: relative;
@@ -20,18 +24,14 @@ body {
 }
 
 .bg{
-  background: url(../images/bild2a.png);
-  background-size: cover;
   width: 100%;
   height: 100%;
 }
 
 .bgc{
-  background: rgba(56, 196, 140, 0.9);
   width: 100%;
   height: 100%;
 }
-
 
 /*SECTIONS*/
 .what-they-say-1-section {
@@ -87,10 +87,54 @@ body {
   transform-origin: 0;
   display: block;
 }
-.contact-section {
 
+.slider-overlay {
+  width: 100%; 
+  height: 100%;
+  position: absolute; 
+  top: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.Navigation a {
-  background-color: red;
+.button-left {
+  font-size: 70px;
+  padding-left: 10px;
+}
+
+.phone {
+  padding-top: 87px;
+  padding-left: 730px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone img {
+  width: 250.4px;
+  height: 504.6px;
+  padding-bottom: 40px;
+}
+
+.test {
+  padding-bottom: 200px;
+}
+
+.download {
+  width: 193px;
+  height: 59.4px;
+  border: solid 5px #000000;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.button-right {
+  padding-right: 10px;
+  font-size: 70px;
+
 }
