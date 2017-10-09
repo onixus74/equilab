@@ -24,7 +24,7 @@ import Button from "../Button";
 // => in the render() method of your app
 
 class App extends Component {
-  
+
   constructor(props){
     super(props)
     this.next = this.next.bind(this);
@@ -79,7 +79,7 @@ class App extends Component {
           body_color: "black-text",
           color: "rgba(255,255,255, 0.6)",
           img: "img/trends.jpg"
-        } 
+        }
       ]
     });
   }
@@ -171,7 +171,7 @@ class App extends Component {
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
 
           <Section color="#A7DBD8" className="horse-carousel center">
-            <ReactSwipe1 ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
+            <ReactSwipe ref="reactSwipe1" className="carousel" swipeOptions={{continuous: true}}>
                 {slides}
             </ReactSwipe>
             <div className="slider-overlay" >
@@ -183,8 +183,8 @@ class App extends Component {
               <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
 
             </div>
-        
-            
+
+
           </Section>
           <Section className="what-they-say-1-section custom-section center" color="">
             <ReactSwipe ref="reactSwipe2" swipeOptions={{continuous: true, speed: 500}}>
