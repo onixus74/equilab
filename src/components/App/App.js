@@ -6,12 +6,19 @@ import '../../css/main.css';
 import PageWrapper from '../PageWrapper/PageWrapper';
 import IntroVideo from '../IntroVideo/IntroVideo';
 import TestW from '../TestW/TestW';
+import Contact from '../Contact/Contact';
+import Hire from "../Hire";
+import WhatTheySay from "../WhatTheySay";
+import WhatTheUsersSay from "../WhatTheUsersSay";
 
 // import {SectionsContainer, Section, Header, Footer} from 'react-fullpage';
 import SectionsContainer from "../SectionsContainer/SectionsContainer";
 import Section from "../Section/Section";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import Faq from "../Faq/Faq";
+import arrow from "../../images/arrow.svg";
+import Button from "../Button";
 
 
 // => in the render() method of your app
@@ -23,7 +30,14 @@ class App extends Component {
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
     this.state = {
+
+      video: [],
+      pageHash: null,
+      activeSlide: 1,
+      bulletsVisible: true,
+      scrollBar: false,
       sliderProps: []
+
     }
   }
 
@@ -70,25 +84,70 @@ class App extends Component {
     });
   }
 
-  next() {
-   this.refs.reactSwipe.next();
+  componentDidMount() {
+    window.addEventListener("hashchange", () => {
+      this.setState({
+        pageHash: window.location.hash
+      })
+    })
+
+    window.addEventListener("resize", () => {
+      const scrollBar = window.innerWidth < 960 ? true : false;
+
+      this.setState({
+        scrollBar
+      })
+    })
+
+  }
+
+  next(id) {
+
+    const instance = "reactSwipe"+id;
+
+    this.refs[instance].swipe.next();
+
+    this.setState((prevState) => {
+      return {
+        activeSlide: prevState.activeSlide < 2 ? prevState.activeSlide + 1 : 1,
+        bulletsVisible: false
+      }
+    })
+
+    setTimeout(() => {this.setState({bulletsVisible: true})}, 500);
  }
 
- prev() {
-   this.refs.reactSwipe.prev();
+ prev(id) {
+   const instance = "reactSwipe"+id;
+
+   this.refs[instance].swipe.prev();
+
+   this.setState((prevState) => {
+     return {
+       activeSlide: prevState.activeSlide > 1 ? prevState.activeSlide - 1 : 2,
+       bulletsVisible: false
+     }
+   })
+
+   setTimeout(() => {this.setState({bulletsVisible: true})}, 500);
  }
 
   render() {
+
+
     let options = {
+      activeClass:          'activeSection',
       sectionClassName:     'section',
-      anchors:              ['sectionOne', 'sectionTwo', 'sectionThree'],
-      scrollBar:            false,
-      navigation:           true,
+      anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour', 'sectionFive', 'sectionSix'],
+      scrollBar:            this.state.scrollBar,
+      navigation:           this.state.pageHash === "#sectionThree" ? false : true,
       verticalAlign:        false,
       arrowNavigation:      true,
       sectionPaddingTop:    '0',
-      sectionPaddingBottom: '0'
+      sectionPaddingBottom: '0',
+      delay:                700
     };
+
 
     let slides = this.state.sliderProps.map(data => {
       return (<div style={{height: "100vh"}} key={data.id}><TestW var={data} /></div>);
@@ -110,20 +169,52 @@ class App extends Component {
         </Footer>
         <SectionsContainer className="container" {...options}>
           <Section className="custom-section" verticalAlign="true" color="black"><PageWrapper /></Section>
-          <Section color="#A7DBD8" className="horse-carousel center">  
-            <ReactSwipe ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
+
+          <Section color="#A7DBD8" className="horse-carousel center">
+            <ReactSwipe1 ref="reactSwipe" className="carousel" swipeOptions={{continuous: true}}>
                 {slides}
             </ReactSwipe>
             <div className="slider-overlay" >
-              <div className="button-left"><p type="button" onClick={this.prev}>&#60;</p></div>
+              <div className="button-left"><p type="button" onClick={() => this.prev(1)}>&#60;</p></div>
               <div className="phone">
                 <img src="/img/phone.png" />
                 <div className="test"><div className="download">Download</div></div>
                 </div>
-              <div className="button-right"><p type="button" onClick={this.next}>&#62;</p></div>
+              <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
+
             </div>
+        
+            
           </Section>
-          <Section className="custom-section" verticalAlign="true" color="#E0E4CC">Page 3</Section>
+          <Section className="what-they-say-1-section custom-section center" color="">
+            <ReactSwipe ref="reactSwipe2" swipeOptions={{continuous: true, speed: 500}}>
+                <div className="center"><WhatTheySay /></div>
+                <div className="center" style={{height: "100vh", background: ""}}><WhatTheUsersSay /></div>
+
+            </ReactSwipe>
+
+            {this.state.bulletsVisible ?
+              <div>
+                <div style={{zIndex: "10", display: "flex", justifyContent: "center", alignItems: "center", width: "100px", left: "0", height: "100%", position: "absolute", bottom: "0"}}>
+                  <img src={arrow} className="prev-button" onClick={() => this.prev(2)} />
+                </div>
+
+                <div className="right-side-bar" style={{zIndex: "10", display: "flex", justifyContent: "center", alignItems: "center", width: "100px", height: "100%", position: "absolute", right: "0", top: "0"}}>
+                  <img src={arrow} className="next-button" onClick={() => this.next(2)} />
+                </div>
+              </div>
+            : "" }
+
+            <div className="bullets">
+              <div className={`bullet-1 ${this.state.activeSlide === 1 ? "fill-bullet" : ""}`}></div>
+              <div className={`bullet-2 ${this.state.activeSlide === 2 ? "fill-bullet" : ""}`}></div>
+
+            </div>
+            <div className="what-they-say-item download"><Button text="Download"/></div>
+          </Section>
+          <Section className="hire-section custom-section center" color=""><Hire /></Section>
+          <Section className="faq-section custom-section center" verticalAlign="true" color=""><Faq /></Section>
+          <Section className="contact-section custom-section center" verticalAlign="true" color="#EB6D4B"><Contact /></Section>
         </SectionsContainer>
       </div>
     );

@@ -1,0 +1,57 @@
+@import "./fonts.css";
+
+/*TYPOGRAPHY*/
+
+h1 {
+  font-family: "poppinsbold";
+  font-size: 70px;
+}
+
+h2 {
+  font-family: "poppinsregular";
+  font-size: 34px;
+}
+
+h3 {
+  font-family: "poppinsregular";
+  font-size: 24px;
+}
+
+h4 {
+  font-family: "poppinsbold";
+  font-size: 14px;
+}
+
+p {
+  font-family: "poppinsregular";
+  font-size: 14px;
+}
+
+/*HEADING SIZES*/
+
+/*H1*/
+.oversize-text {
+  font-family: poppinsbold;
+  font-size: 100px;
+}
+
+/*H4*/
+.small-bold {
+  font-family: poppinsbold;
+  font-size: 20px;
+}
+
+/*OTHER SIZES*/
+.medium-thin {
+  font-family: poppinsextralight;
+  font-size: 25px;
+}
+.medium-bold {
+  font-family: poppinsbold;
+  font-size: 25px;
+}
+
+.button-text {
+  font-family: "poppinsregular";
+  font-size: 24px;
+}
