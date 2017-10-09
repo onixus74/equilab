@@ -13,9 +13,14 @@ class Contact extends Component {
         <div className="contact">
 
           <div className="contact-content">
-            <h1>Contact</h1>
-            <p>Equilab is made together with riders to get the best app possible for our users. We would love your feedback on how we can make the app even better. In the end, this app is for you and your horse and who knows your horse better than you do?</p>
-            <span className="medium-bold">team@equilab.horse</span>
+            <div className="contact-content-left">
+              <h1>Contact</h1>
+            </div>
+            <div className="contact-content-right">
+              <p>Equilab is made together with riders to get the best app possible for our users. We would love your feedback on how we can make the app even better. In the end, this app is for you and your horse and who knows your horse better than you do?</p>
+              <span className="medium-bold">team@equilab.horse</span>
+            </div>
+
 
           </div>
 

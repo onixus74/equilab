@@ -11,7 +11,7 @@ const startTextTransitionTime = totTransitionTime - (bgTransitionTime / 1.7);
 
 const MainButton = styled.div`
 
-  display: block;
+  display: inline-block;
   width: 190px;
   line-height: 50px;
   text-align: center;

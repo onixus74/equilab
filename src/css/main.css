@@ -105,23 +105,18 @@ body {
   padding-left: 10px;
 }
 
-.phone {
-  padding-top: 87px;
-  /*padding-left: 730px;*/
-  width: 250px;
-  height: 504px;
-  display: flex;
+.phone-column {
+  position: absolute;
+  right: 160px;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  overflow: hidden;
-  
 }
 
-.phone img {
-  width: 250.4px;
-  height: 504.6px;
-  padding-bottom: 40px;
+.phone {
+  width: 18vw;
+  height: 32vw;
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .test {
@@ -134,21 +129,32 @@ body {
 
 }
 
-iframe {
-  width: 248px;
-  height: 495px;
+.iframe-wrap {
   position: absolute;
+  display: flex;
+  justify-content: center;
   z-index: 3550;
-  
+  border-radius: 90px;
+  overflow:hidden;
+  width: 100%;
+  height: 100%;
+}
+
+iframe {
+  width: 84%;
+  height: 100%;
 }
 
 .phone-background {
   background: url('../images/phone.png');
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 3600;
-  clip-path: polygon(0% 0%, 0% 100%, 3% 100%, 3% 9%, 97% 9%, 97% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 9% 100%, 9% 9%, 91% 9%, 91% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
 }

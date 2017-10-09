@@ -176,11 +176,15 @@ class App extends Component {
             </ReactSwipe>
             <div className="slider-overlay" >
               <div className="button-left"><p type="button" onClick={() => this.prev(1)}>&#60;</p></div>
-              <div className="phone">
-                <div className="phone-background"></div>
-                <iframe src="https://www.youtube.com/embed/uEENgtrO4-8?autoplay=1" frameborder="0" allowfullscreen></iframe>
-                <Button />
+
+              <div className="phone-column">
+                <div className="phone">
+                  <div className="phone-background"></div>
+                  <div className="iframe-wrap"><iframe src="https://www.youtube.com/embed/uEENgtrO4-8?autoplay=1&loop=1&playlist=uEENgtrO4-8" frameborder="0" allowfullscreen></iframe></div>
                 </div>
+                  <Button text="Download" />
+              </div>
+
               <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
 
             </div>
