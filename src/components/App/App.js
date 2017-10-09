@@ -177,8 +177,9 @@ class App extends Component {
             <div className="slider-overlay" >
               <div className="button-left"><p type="button" onClick={() => this.prev(1)}>&#60;</p></div>
               <div className="phone">
-                <img src="/img/phone.png" />
-                <div className="test"><div className="download">Download</div></div>
+                <div className="phone-background"></div>
+                <iframe src="https://www.youtube.com/embed/uEENgtrO4-8?autoplay=1" frameborder="0" allowfullscreen></iframe>
+                <Button />
                 </div>
               <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
 

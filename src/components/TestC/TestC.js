@@ -9,6 +9,7 @@ export default class TestC extends Component {
                 <h1 className={this.props.data.hedline_color}>{this.props.data.hedline}</h1>
                 <p className={this.props.data.body_color}>{this.props.data.body}</p>
                 </div>
+                <div className="triangle"></div>
             </div>
         );
     }

@@ -107,10 +107,15 @@ body {
 
 .phone {
   padding-top: 87px;
-  padding-left: 730px;
+  /*padding-left: 730px;*/
+  width: 250px;
+  height: 504px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  overflow: hidden;
+  
 }
 
 .phone img {
@@ -127,4 +132,23 @@ body {
   padding-right: 10px;
   font-size: 70px;
 
+}
+
+iframe {
+  width: 248px;
+  height: 495px;
+  position: absolute;
+  z-index: 3550;
+  
+}
+
+.phone-background {
+  background: url('../images/phone.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 3600;
+  clip-path: polygon(0% 0%, 0% 100%, 3% 100%, 3% 9%, 97% 9%, 97% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
 }
