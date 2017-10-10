@@ -4,7 +4,7 @@ import './TestC.css';
 export default class TestC extends Component {
     render () {
         let triangle = {
-            backgroundImage: `linear-gradient(to left top, ${this.props.data.color_full} 0%, ${this.props.data.color} 50%, transparent 50%)`,
+            backgroundImage: `linear-gradient(to left top, ${this.props.data.color_full} 0%, ${this.props.data.color_trans} 50%, transparent 50%)`,
             position: "absolute",
             width: "100%",
             height: "100%",

@@ -52,6 +52,7 @@ class App extends Component {
           body_color: "white-text",
           color: "rgba(237,108,68, 0.6)",
           color_full: "rgb(237,108,68)",
+          color_trans: "rgba(237,108,68, 0.65)",
           img: "/img/details.jpg"
         },
         {
@@ -62,7 +63,7 @@ class App extends Component {
           body_color: "white-text",
           color: "rgba(56,132,130, 0.89)",
           color_full: "rgb(56,132,130)",
-          color_trans: "rgba(56,132,130, 0.89)",
+          color_trans: "rgba(56,132,130, 0.65)",
           img: "img/social.jpg"
         },
         {
@@ -73,6 +74,7 @@ class App extends Component {
           body_color: "white-text",
           color: "rgba(253, 174, 58, 0.9)",
           color_full: "rgb(253, 174, 58)",
+          color_trans: "rgba(253, 174, 58, 0.65)",
           img: "img/track.jpg"
         },
         {
@@ -83,6 +85,7 @@ class App extends Component {
           body_color: "black-text",
           color: "rgba(255,255,255, 0.6)",
           color_full: "rgb(255,255,255)",
+          color_trans: "rgba(255,255,255, 0.65)",
           img: "img/trends.jpg"
         }
       ]
