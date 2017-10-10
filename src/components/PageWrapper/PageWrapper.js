@@ -12,7 +12,6 @@ export default class PageWrapper extends Component {
                     </h1>
                 </div>
                 <IntroVideo />
-                <div className="triangle"></div>
             </div>
             
         );

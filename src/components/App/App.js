@@ -47,19 +47,22 @@ class App extends Component {
         {
           id: 0,
           hedline: "DETAILS",
-          hedline_color: "black-text",
+          hedline_color: "white-text",
           body: "Afterwards you can analyze your training by looking at your horse’s energy consumption, gait distrubution, intensity, jumps, pace, distance and much more.",
           body_color: "white-text",
           color: "rgba(237,108,68, 0.6)",
+          color_full: "rgb(237,108,68)",
           img: "/img/details.jpg"
         },
         {
           id: 1,
           hedline: "SOCIAL",
-          hedline_color: "black-text",
+          hedline_color: "white-text",
           body: "See how your co-riders have exercised or give your coach more insight into how you ride when they aren’t around.",
           body_color: "white-text",
           color: "rgba(56,132,130, 0.89)",
+          color_full: "rgb(56,132,130)",
+          color_trans: "rgba(56,132,130, 0.89)",
           img: "img/social.jpg"
         },
         {
@@ -69,6 +72,7 @@ class App extends Component {
           body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
           body_color: "white-text",
           color: "rgba(253, 174, 58, 0.9)",
+          color_full: "rgb(253, 174, 58)",
           img: "img/track.jpg"
         },
         {
@@ -78,6 +82,7 @@ class App extends Component {
           body: "Look at your weekly or monthly trends and gain an understanding of how balanced your training has been. ",
           body_color: "black-text",
           color: "rgba(255,255,255, 0.6)",
+          color_full: "rgb(255,255,255)",
           img: "img/trends.jpg"
         }
       ]
@@ -179,7 +184,7 @@ class App extends Component {
 
               <div className="phone-column">
                 <div className="phone">
-                  <div className="phone-background"></div>
+                  {<div className="phone-background"></div>}
                   <div className="iframe-wrap"><iframe src="https://www.youtube.com/embed/uEENgtrO4-8?autoplay=1&loop=1&playlist=uEENgtrO4-8" frameborder="0" allowfullscreen></iframe></div>
                 </div>
                   <Button text="Download" />
