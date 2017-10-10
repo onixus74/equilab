@@ -15,8 +15,7 @@ export default class PageWrapper extends Component {
                 </div>
                 <IntroVideo />
                 <div className="corner-right">
-                
-                    <div className="text-corner-right">Årets pryl</div>
+                    <div className="text-corner-right">Årets pryl 2016</div>
                 </div>
             </div>
             

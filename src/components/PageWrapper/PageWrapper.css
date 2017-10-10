@@ -31,6 +31,8 @@
       /* text-shadow: 2px 2px rgba(0,0,0, 0.5); */
       font-size: 80px;
       line-height: 130px;
+      margin-bottom: 0px;
+      padding-bottom: 0px;
   }
 
   .corner-right {
@@ -51,7 +53,7 @@
     align-items: center;
     justify-content: center;
     background: white;
-    width: 200px;
+    width: 160px;
     transform: rotate(-45deg);
   }
 

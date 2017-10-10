@@ -6,7 +6,7 @@ export default class IntroVideo extends Component {
         return (
                 
                 <video autoPlay loop muted>
-                    <source src="img/horsemoviegrey2.mp4" type="video/mp4" />
+                    <source src="img/horsemoviegrey4.mp4" type="video/mp4" />
                 </video>
                
         );
