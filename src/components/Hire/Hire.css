@@ -1,6 +1,7 @@
 @import "../../css/variables.css";
 .hire-wrap {
   overflow: hidden;
+  height: 100%;
 }
 .hire {
   box-sizing: border-box;
@@ -10,16 +11,23 @@
   display: grid;
   grid-template-rows: auto 1fr;
   grid-template-columns: 40% 20% 40%;
-  /*background: red;*/
+  /*background: yellow;*/
   overflow: visible;
 }
 
 .hire h2, h3, h4 {
   margin: 0;
 }
+.hire h2 {
+  font-size: 2vw;
+}
+.hire h3 {
+  font-size: 1.5vw;
+}
 
 .hire p {
   margin-top: 0;
+  font-size: 1vw;
 }
 .hire-item {
   /*background: red;*/
@@ -36,12 +44,14 @@
 }
 
 .hire-item-b, .hire-item-d {
-  padding-top: 40px;
+  /*padding-top: 40px;*/
+  align-self: center;
 }
 
 .hire-item-a h1 {
-  margin: 50px 0 0 0;
+  margin: 3vw 0 0 0;
   line-height: 1;
+  font-size: 5vw;
 }
 
 .hire-wrap {

@@ -3,10 +3,18 @@
   width: 100%;
   margin: 0 150px;
   display: grid;
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto auto 20%;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 70px;
   /*background: red;*/
+}
+
+.what-the-users-say p, h4 {
+  font-size: 1vw;
+}
+
+.what-the-users-say h1 {
+  font-size: 5vw;
 }
 
 .what-the-users-say-item {
@@ -15,7 +23,7 @@
 }
 
 .heading {
-  padding-top: 50px;
+  margin-top: 3vw;
   grid-column-start: 1;
   grid-column-end: 5;
   align-self: flex-start;
@@ -28,7 +36,7 @@
 }
 
 .star {
-  height: 10px;
+  height: 1vw;
   width: auto;
   margin-right: 5px;
 }

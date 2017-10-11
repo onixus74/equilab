@@ -4,7 +4,7 @@
 @import "./helper-classes.css";
 @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-
+html, body {margin: 0; height: 100%; overflow: hidden}
 body {
   margin: 0;
   padding: 0;

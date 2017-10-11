@@ -5,31 +5,33 @@
   margin: 0 150px;
   height: 100vh;
   display: grid;
-  grid-template-rows: auto auto auto 10%;
+  grid-template-rows: auto auto auto 20%;
   /*grid-template-columns: 35% 30% 30%;*/
-  grid-template-columns: 15% 35% auto 35%;
+  grid-template-columns: auto auto auto auto;
   justify-content: center;
   position: relative;
   grid-gap: 1px;
-  background: green;
+  /*background: green;*/
 }
 
 .what-they-say h1 {
   margin: 0;
   line-height: 1;
+  font-size: 5vw;
 }
 .what-they-say p {
   margin: 0;
+  font-size: 1vw;
 }
 
 .what-they-say-item {
-  background: red;
+  /*background: red;*/
   text-align: left;
 }
 
 .what-they-say-item-a {
   /*background: yellow;*/
-  padding-top: 50px;
+  padding-top: 3vw;
   grid-column-start: 1;
   grid-column-end: 5;
   text-align: left;
@@ -37,8 +39,9 @@
 }
 
 .rider {
-  width: 100%;
   border-radius: 50%;
+  width: 12vw;
+  height: 12vw;
   border: 10px solid rgba(255,255,255,0.5);
   box-shadow: 2px 2px 0 2px rgba(47, 79, 79, .5);
 }
