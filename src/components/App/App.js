@@ -168,10 +168,10 @@ class App extends Component {
       <div>
         <Header>
           <div className="logo-wrapper"><img className="logo" src={Logo} /></div>
-          <div className="menu-links"><a href="#sectionOne">About</a>
-          <a href="#sectionTwo">Hiring</a>
-          <a href="#sectionThree">FAQ</a>
-          <a href="#sectionThree">Contact</a>
+          <div className="menu-links"><a href="#sectionThree">About</a>
+          <a href="#sectionFour">Hiring</a>
+          <a href="#sectionFive">FAQ</a>
+          <a href="#sectionSix">Contact</a>
           </div> 
         </Header>
         <Footer>
