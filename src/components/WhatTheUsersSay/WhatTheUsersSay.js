@@ -5,7 +5,7 @@ import "./WhatTheUsersSay.css";
 const WhatTheUsersSay = props => (
   <div className="what-the-users-say">
     <div className="what-the-users-say-item heading">
-      <h1>What the users say <span style={{display: "block"}}> about us!</span></h1>
+      <h1>What the users <span style={{display: "block"}}>say about us!</span></h1>
     </div>
     <div className="what-the-users-say-item">
       <img className="star" src={star} />

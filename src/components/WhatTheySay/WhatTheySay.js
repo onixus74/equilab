@@ -11,7 +11,7 @@ class WhatTheySay extends Component {
       <div className="what-they-say">
 
         <div className="what-they-say-item what-they-say-item-a">
-          <h1>What the riders say <span style={{display: "block"}}> about us!</span></h1>
+          <h1>What the riders <span style={{display: "block"}}>say about us!</span></h1>
         </div>
 
         <div className="what-they-say-item rider-image-1">
