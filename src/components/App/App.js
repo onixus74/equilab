@@ -46,12 +46,23 @@ class App extends Component {
     this.setState({
       sliderProps: [
         {
+          id: 2,
+          hedline: "TRACK",
+          hedline_color: "white-text",
+          body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
+          body_color: "white-text",
+          color: "rgba(253, 174, 58, 0.9)",
+          color_full: "rgb(253, 174, 58)",
+          color_trans: "rgba(253, 174, 58, 0.65)",
+          img: "img/track.jpg"
+        },
+        {
           id: 0,
           hedline: "DETAILS",
           hedline_color: "white-text",
           body: "Afterwards you can analyze your training by looking at your horse’s energy consumption, gait distrubution, intensity, jumps, pace, distance and much more.",
           body_color: "white-text",
-          color: "rgba(237,108,68, 0.6)",
+          color: "rgba(237,108,68, 0.8)",
           color_full: "rgb(237,108,68)",
           color_trans: "rgba(237,108,68, 0.65)",
           img: "/img/details.jpg"
@@ -66,17 +77,6 @@ class App extends Component {
           color_full: "rgb(56,132,130)",
           color_trans: "rgba(56,132,130, 0.65)",
           img: "img/social.jpg"
-        },
-        {
-          id: 2,
-          hedline: "TRACK",
-          hedline_color: "white-text",
-          body: "Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket whilst riding.",
-          body_color: "white-text",
-          color: "rgba(253, 174, 58, 0.9)",
-          color_full: "rgb(253, 174, 58)",
-          color_trans: "rgba(253, 174, 58, 0.65)",
-          img: "img/track.jpg"
         },
         {
           id: 3,

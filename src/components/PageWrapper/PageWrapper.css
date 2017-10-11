@@ -7,7 +7,7 @@
   .content:before {
     content: '';
     position: absolute;
-    background: rgba(237,108,68, 0.6);
+    background: rgba(237,108,68, 0.8);
     top: 0;
     right: 0;
     bottom: 0;
