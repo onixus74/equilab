@@ -166,7 +166,7 @@ iframe {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  width: 50%; 
+  width: 50%;
 }
 
 .menu-links a {

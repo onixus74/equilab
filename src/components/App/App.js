@@ -33,7 +33,7 @@ class App extends Component {
     this.state = {
 
       video: [],
-      pageHash: null,
+      pageHash: window.location.hash,
       activeSlide: 1,
       bulletsVisible: true,
       scrollBar: false,
@@ -116,14 +116,25 @@ class App extends Component {
 
     this.refs[instance].swipe.next();
 
-    this.setState((prevState) => {
-      return {
-        activeSlide: prevState.activeSlide < 2 ? prevState.activeSlide + 1 : 1,
-        bulletsVisible: false
-      }
-    })
+    if(instance === "reactSwipe2") {
+      this.setState((prevState) => {
+        return {
+          activeSlide: prevState.activeSlide < 2 ? prevState.activeSlide + 1 : 1,
+          bulletsVisible: false
+        }
+      })
 
-    setTimeout(() => {this.setState({bulletsVisible: true})}, 500);
+      setTimeout(() => {this.setState({bulletsVisible: true})}, 500);
+    } else {
+      this.setState((prevState) => {
+        return {
+          activeSlide: prevState.activeSlide < 4 ? prevState.activeSlide + 1 : 1,
+          bulletsVisible: false
+        }
+      })
+    }
+
+
  }
 
  prev(id) {
@@ -131,12 +142,23 @@ class App extends Component {
 
    this.refs[instance].swipe.prev();
 
-   this.setState((prevState) => {
-     return {
-       activeSlide: prevState.activeSlide > 1 ? prevState.activeSlide - 1 : 2,
-       bulletsVisible: false
-     }
-   })
+   if(instance === "reactSwipe2") {
+     this.setState((prevState) => {
+       return {
+         activeSlide: prevState.activeSlide > 1 ? prevState.activeSlide - 1 : 2,
+         bulletsVisible: false
+       }
+     })
+   } else {
+     this.setState((prevState) => {
+       return {
+         activeSlide: prevState.activeSlide > 1 ? prevState.activeSlide - 1 : 4,
+         bulletsVisible: false
+       }
+     })
+   }
+
+
 
    setTimeout(() => {this.setState({bulletsVisible: true})}, 500);
  }
@@ -149,7 +171,7 @@ class App extends Component {
       sectionClassName:     'section',
       anchors:              ['sectionOne', 'sectionTwo', 'sectionThree', 'sectionFour', 'sectionFive', 'sectionSix'],
       scrollBar:            this.state.scrollBar,
-      navigation:           this.state.pageHash === "#sectionThree" ? false : true,
+      navigation:           this.state.pageHash === "#sectionThree" || this.state.pageHash === "#sectionTwo"  ? false : true,
       verticalAlign:        false,
       arrowNavigation:      true,
       sectionPaddingTop:    '0',
@@ -163,7 +185,7 @@ class App extends Component {
     });
 
 
-
+  
     return (
       <div>
         <Header>
@@ -172,7 +194,7 @@ class App extends Component {
           <a href="#sectionTwo">Hiring</a>
           <a href="#sectionThree">FAQ</a>
           <a href="#sectionThree">Contact</a>
-          </div> 
+          </div>
         </Header>
         <Footer>
           {/* <a href="">Dcoumentation</a>
@@ -187,7 +209,7 @@ class App extends Component {
                 {slides}
             </ReactSwipe>
             <div className="slider-overlay" >
-              <div className="button-left"><p type="button" onClick={() => this.prev(1)}><img src={arrow} /></p></div>
+              <div className="button-left"><img onClick={() => this.prev(1)} src={arrow} /></div>
 
               <div className="phone-column">
                 <div className="phone">
@@ -198,13 +220,13 @@ class App extends Component {
               </div>
 
               <div className="button-right"><p type="button" onClick={() => this.next(1)}><img src={arrow} /></p></div>
-              
+
             </div>
             <div className="pluttar">
-              <span className="plutt active"></span>
-              <span className="plutt"></span>
-              <span className="plutt"></span>
-              <span className="plutt"></span>
+              <span ref="plutt1" className={`bullet-1 ${this.state.activeSlide === 1 ? "fill-bullet" : ""}`}></span>
+              <span ref="plutt2" className={`bullet-1 ${this.state.activeSlide === 2 ? "fill-bullet" : ""}`}></span>
+              <span ref="plutt3" className={`bullet-1 ${this.state.activeSlide === 3 ? "fill-bullet" : ""}`}></span>
+              <span ref="plutt4" className={`bullet-1 ${this.state.activeSlide === 4 ? "fill-bullet" : ""}`}></span>
             </div>
 
           </Section>
