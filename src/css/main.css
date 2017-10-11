@@ -101,7 +101,7 @@ body {
 }
 
 .button-left {
-  font-size: 70px;
+  transform: rotate(90deg);
   padding-left: 10px;
 }
 
@@ -125,8 +125,7 @@ body {
 
 .button-right {
   padding-right: 10px;
-  font-size: 70px;
-
+  transform: rotate(-90deg);
 }
 
 .iframe-wrap {
@@ -157,4 +156,16 @@ iframe {
   left: 0;
   z-index: 3600;
   clip-path: polygon(0% 0%, 0% 100%, 9% 100%, 9% 9%, 91% 9%, 91% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%; 
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: white;
 }
