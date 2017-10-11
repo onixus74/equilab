@@ -19,6 +19,7 @@ import Footer from "../Footer/Footer";
 import Faq from "../Faq/Faq";
 import arrow from "../../images/arrow.svg";
 import Button from "../Button";
+import Logo from '../../images/logowhite.svg';
 
 
 // => in the render() method of your app
@@ -166,9 +167,12 @@ class App extends Component {
     return (
       <div>
         <Header>
-          {/* <a href="#sectionOne">Section One</a>
-          <a href="#sectionTwo">Section Two</a>
-          <a href="#sectionThree">Section Three</a> */}
+          <div className="logo-wrapper"><img className="logo" src={Logo} /></div>
+          <div className="menu-links"><a href="#sectionOne">About</a>
+          <a href="#sectionTwo">Hiring</a>
+          <a href="#sectionThree">FAQ</a>
+          <a href="#sectionThree">Contact</a>
+          </div> 
         </Header>
         <Footer>
           {/* <a href="">Dcoumentation</a>
@@ -183,7 +187,7 @@ class App extends Component {
                 {slides}
             </ReactSwipe>
             <div className="slider-overlay" >
-              <div className="button-left"><p type="button" onClick={() => this.prev(1)}>&#60;</p></div>
+              <div className="button-left"><p type="button" onClick={() => this.prev(1)}><img src={arrow} /></p></div>
 
               <div className="phone-column">
                 <div className="phone">
@@ -193,10 +197,15 @@ class App extends Component {
                   <Button text="Download" />
               </div>
 
-              <div className="button-right"><p type="button" onClick={() => this.next(1)}>&#62;</p></div>
-
+              <div className="button-right"><p type="button" onClick={() => this.next(1)}><img src={arrow} /></p></div>
+              
             </div>
-
+            <div className="pluttar">
+              <span className="plutt active"></span>
+              <span className="plutt"></span>
+              <span className="plutt"></span>
+              <span className="plutt"></span>
+            </div>
 
           </Section>
           <Section className="what-they-say-1-section custom-section center" color="">

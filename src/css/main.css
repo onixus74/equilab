@@ -101,7 +101,7 @@ body {
 }
 
 .button-left {
-  font-size: 70px;
+  transform: rotate(90deg);
   padding-left: 10px;
 }
 
@@ -125,8 +125,7 @@ body {
 
 .button-right {
   padding-right: 10px;
-  font-size: 70px;
-
+  transform: rotate(-90deg);
 }
 
 .iframe-wrap {
@@ -157,4 +156,44 @@ iframe {
   left: 0;
   z-index: 3600;
   clip-path: polygon(0% 0%, 0% 100%, 9% 100%, 9% 9%, 91% 9%, 91% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
+}
+
+.logo-wrapper {
+  padding-left: 20px;
+}
+
+.menu-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%; 
+}
+
+.menu-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+.pluttar {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  bottom: 50px;
+  z-index: 300;
+}
+
+.plutt {
+  width: 12px;
+  height: 12px;
+  margin: 5px;
+  border-radius: 100%;
+  border: solid 2px black;
+}
+
+.active {
+  background: black;
 }

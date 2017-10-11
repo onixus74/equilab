@@ -20,8 +20,8 @@
     position: absolute;
     margin: 0 auto;
     margin-top: 230px;
-    margin-left: 102px;
-    max-width: 1030px;
+    
+    width: 100%;
     text-align: left;
     z-index: 3500;
   }
@@ -33,6 +33,8 @@
       line-height: 130px;
       margin-bottom: 0px;
       padding-bottom: 0px;
+      max-width: 1030px;
+      margin-left: 102px;
   }
 
   .corner-right {
@@ -45,6 +47,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      
   }
 
   .text-corner-right {
@@ -55,6 +58,28 @@
     background: white;
     width: 160px;
     transform: rotate(-45deg);
+    overflow: hidden;
   }
 
+  .arrow-down {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: -300px;
+    
+  }
+
+  .margin{
+    position: absolute;
+   width: 50%;
+  }
+
+  .logo {
+    width: 88px;
+    height: 100px;
+  }
   
+  .button-margin {
+    margin-left: 102px;
+  }
