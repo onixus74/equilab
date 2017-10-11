@@ -20,7 +20,7 @@
     position: absolute;
     margin: 0 auto;
     margin-top: 230px;
-    margin-left: 102px;
+    
     width: 100%;
     text-align: left;
     z-index: 3500;
@@ -34,6 +34,7 @@
       margin-bottom: 0px;
       padding-bottom: 0px;
       max-width: 1030px;
+      margin-left: 102px;
   }
 
   .corner-right {
@@ -65,7 +66,8 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    bottom: -200px;
+    bottom: -300px;
+    
   }
 
   .margin{
@@ -74,7 +76,10 @@
   }
 
   .logo {
-    width: 94px;
-    height: 106px;
+    width: 88px;
+    height: 100px;
   }
   
+  .button-margin {
+    margin-left: 102px;
+  }

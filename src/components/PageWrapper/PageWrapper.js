@@ -13,7 +13,7 @@ export default class PageWrapper extends Component {
                     <h1 className="caption">
                     Equilab - an app for the people who want the best for their horse.
                     </h1>
-                    <Button borderColor="white" hoverBgColor="white" textColor="white" hoverTextColor="black" text="Download"/>
+                    <div className="button-margin"><Button borderColor="white" hoverBgColor="white" textColor="white" hoverTextColor="black" text="Download"/></div>
                     <div className="arrow-down">
                         <img src={SvgArrow} />
                         <div className="margin"></div>

@@ -158,6 +158,10 @@ iframe {
   clip-path: polygon(0% 0%, 0% 100%, 9% 100%, 9% 9%, 91% 9%, 91% 91%, 3% 91%, 3% 100%, 100% 100%, 100% 0%);
 }
 
+.logo-wrapper {
+  padding-left: 20px;
+}
+
 .menu-links {
   display: flex;
   flex-direction: row;
@@ -168,6 +172,7 @@ iframe {
 .menu-links a {
   text-decoration: none;
   color: white;
+  font-size: 20px;
 }
 
 .pluttar {
