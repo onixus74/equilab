@@ -6,7 +6,7 @@ class Header extends React.Component {
             position: 'fixed',
             width: '100%',
             zIndex: '1',
-            top: '15px',
+            top: '10px',
             display: 'flex',
             flexDirection: 'row',
             justifyContent: 'space-between',
