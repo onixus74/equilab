@@ -196,9 +196,14 @@ class App extends Component {
               </div>
 
               <div className="button-right"><p type="button" onClick={() => this.next(1)}><img src={arrow} /></p></div>
-
+              
             </div>
-
+            <div className="pluttar">
+              <span className="plutt active"></span>
+              <span className="plutt"></span>
+              <span className="plutt"></span>
+              <span className="plutt"></span>
+            </div>
 
           </Section>
           <Section className="what-they-say-1-section custom-section center" color="">

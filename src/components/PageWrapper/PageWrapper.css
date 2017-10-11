@@ -46,6 +46,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      
   }
 
   .text-corner-right {
@@ -56,6 +57,7 @@
     background: white;
     width: 160px;
     transform: rotate(-45deg);
+    overflow: hidden;
   }
 
   .arrow-down {
